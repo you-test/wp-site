@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+/* color */ 
+$green: #e7f5e7;
+$orange: #f2b590;
+$red: #ec9999;
+$yellow: #eaea7e;
+$white: #fff;
+$black: #666;
+$grey: #828080;
+    
+/* font family */ 
+$mainfont_jp: 'Noto Sans JP';
+$mainfont_en: 'Noto Sans';
+$title_font: 'Comfortaa', cursive;
+
+/* breakpoints */ 
+$breakpoints: (
+  'sm': 'screen and (max-width: 600px)',
+  'md': 'screen and (max-width: 999px)',
+  'lg': 'screen and (min-width: 1000px)',
+) !default;
+
+@mixin mq($breakpoint: sm) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
